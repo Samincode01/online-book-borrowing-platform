@@ -1,9 +1,10 @@
 "use client";
-
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,13 +15,23 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  const HandleLoginFunc = (data) => {
-    console.log(data);
+ const HandleLoginFunc = async (data) => {
+    console.log(data, "data");
 
-    const email = data.email;
-    const password = data.password;
+    const { data: res, error } = await authClient.signIn.email({
+      email: data.email, // required
+      password: data.password, // required
+      rememberMe: true,
+      callbackURL: "/",
+    });
+       if (error) {
+      toast.error(error.message);
+    }
+    
 
-    console.log(email, password);
+    if (res) {
+      toast.success("Logged in successfully");
+    }
   };
 
   return (

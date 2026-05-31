@@ -1,18 +1,24 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const RegisterPage = () => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [isShowPassword, setIsShowPassword] =
+    useState(false);
 
   const handleRegisterFunc = async (data) => {
     const { email, name, photo, password } = data;
@@ -27,13 +33,17 @@ const RegisterPage = () => {
       });
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message || "Signup failed");
       return;
     }
 
     if (res) {
-      alert("Signup successful");
-    }
+  toast.success("Signup successful");
+
+  await authClient.signOut();
+
+  router.push("/login");
+}
   };
 
   return (
@@ -67,7 +77,7 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          {/* Photo */}
+          {/* Photo URL */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend">
               Photo URL
@@ -131,12 +141,12 @@ const RegisterPage = () => {
               />
 
               <span
-                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500"
                 onClick={() =>
                   setIsShowPassword(
                     !isShowPassword
                   )
                 }
+                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500"
               >
                 {isShowPassword ? (
                   <FaEyeSlash />
@@ -153,7 +163,7 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          <button className="btn btn-primary w-full text-white">
+          <button className="btn btn-primary w-full text-white mt-4">
             Register
           </button>
         </form>
@@ -162,7 +172,7 @@ const RegisterPage = () => {
           Already have an account?{" "}
           <Link
             href="/login"
-            className="text-blue-500"
+            className="text-blue-500 font-medium"
           >
             Login
           </Link>
