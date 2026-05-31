@@ -2,31 +2,31 @@ import React from 'react';
 
 export default function Choose() {
   const features = [
-    {
-      title: "Wide Book Collection",
-      description:
-        "Explore Story, Tech, and Science books from bestsellers to timeless classics.",
-      icon: "📚",
-    },
-    {
-      title: "Fast Delivery",
-      description:
-        "Get your favorite books delivered quickly and safely to your doorstep.",
-      icon: "🚚",
-    },
-    {
-      title: "Affordable Prices",
-      description:
-        "Enjoy competitive prices, member discounts, and seasonal offers.",
-      icon: "💰",
-    },
-    {
-      title: "Trusted by Readers",
-      description:
-        "Thousands of happy readers choose Book House for quality and service.",
-      icon: "⭐",
-    },
-  ];
+  {
+    title: "Wide Book Collection",
+    description:
+      "Browse a wide range of Story, Tech, and Science books—from classics to modern favorites.",
+    icon: "📚",
+  },
+  {
+    title: "Easy Borrowing",
+    description:
+      "Borrow your favorite books online in just a few clicks anytime, anywhere.",
+    icon: "🔖",
+  },
+  {
+    title: "Available Anytime",
+    description:
+      "Check book availability instantly and find your next read whenever you want.",
+    icon: "⏰",
+  },
+  {
+    title: "Loved by Readers",
+    description:
+      "Join a growing community of readers discovering and borrowing books every day.",
+    icon: "⭐",
+  },
+];
 
   return (
     <section className="py-16 bg-base-100">
