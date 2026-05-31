@@ -34,7 +34,7 @@ const LoginPage = () => {
 
 setTimeout(() => {
   router.push("/");
-}, 1500);
+}, 3500);
     }
   };
 

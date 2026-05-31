@@ -7,6 +7,7 @@ import Image from "next/image";
 import { FaBookOpen, FaRegBookmark } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
 import userImage from "@/assets/user.png";
+import Link from "next/link";
 export default function ProfilePage() {
   const router = useRouter();
   const { data: session } = authClient.useSession();
@@ -49,6 +50,9 @@ export default function ProfilePage() {
               Premium Reader
             </span>
           </div>
+          <Link href={"/updateprofile"}>
+          <button className="btn btn-primary">Update Profile</button>
+          </Link>
         </div>
 
         {/* Stats */}
