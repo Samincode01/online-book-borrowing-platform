@@ -30,7 +30,11 @@ const LoginPage = () => {
     
 
     if (res) {
-      toast.success("Logged in successfully");
+      toast.success("Logged in successfully!");
+
+setTimeout(() => {
+  router.push("/");
+}, 1500);
     }
   };
 

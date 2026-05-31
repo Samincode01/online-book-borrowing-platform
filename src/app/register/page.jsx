@@ -38,11 +38,11 @@ const RegisterPage = () => {
     }
 
     if (res) {
-  toast.success("Signup successful");
-
+  toast.success("Signup successful! Redirecting to login...");
   await authClient.signOut();
-
+setTimeout(() => {
   router.push("/login");
+}, 1800);
 }
   };
 
