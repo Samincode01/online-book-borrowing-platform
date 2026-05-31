@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="flex gap-4">
              <Link href={"/books"}>
               <button className="btn btn-primary">
-                Browse Books
+                Browse Now
               </button>
              </Link>
 

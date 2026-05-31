@@ -6,7 +6,7 @@
     "description": "A mysterious tale about a hidden forest where every tree holds a forgotten memory.",
     "category": "Story",
     "available_quantity": 14,
-    "image_url": "https://example.com/images/the-silent-forest.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A practical guide to modern software development, scalable systems, and clean coding principles.",
     "category": "Tech",
     "available_quantity": 8,
-    "image_url": "https://example.com/images/code-beyond-limits.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780131103627-L.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An exploration of galaxies, black holes, and the mechanics of the expanding universe.",
     "category": "Science",
     "available_quantity": 11,
-    "image_url": "https://example.com/images/stars-in-motion.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780393356182-L.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A gripping adventure following a traveler searching for the final lantern that can light the ancient city.",
     "category": "Story",
     "available_quantity": 6,
-    "image_url": "https://example.com/images/the-last-lantern.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "An introduction to artificial intelligence, machine learning, and how machines learn from data.",
     "category": "Tech",
     "available_quantity": 10,
-    "image_url": "https://example.com/images/machine-thinking.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781492052203-L.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "A fascinating look at how chemical reactions shape biology, ecosystems, and human life.",
     "category": "Science",
     "available_quantity": 9,
-    "image_url": "https://example.com/images/the-chemistry-of-life.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780192806734-L.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "A heartfelt story of friendship and discovery set along a magical river that changes with emotion.",
     "category": "Story",
     "available_quantity": 13,
-    "image_url": "https://example.com/images/river-of-dreams.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "A clear and practical overview of cloud computing, infrastructure, and distributed applications.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://example.com/images/cloud-architecture-essentials.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781617294136-L.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "A journey into atomic structure, quantum theory, and the building blocks of matter.",
     "category": "Science",
     "available_quantity": 12,
-    "image_url": "https://example.com/images/inside-the-atom.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780465025275-L.jpg"
   },
   {
     "id": 10,
@@ -87,24 +87,24 @@
     "description": "A moving story about letters exchanged between strangers under the light of the moon.",
     "category": "Story",
     "available_quantity": 15,
-    "image_url": "https://example.com/images/moonlight-letters.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780141439600-L.jpg"
   },
   {
     "id": 11,
-    "title": "Frontend Patterns",
+    "title": "JavaSript Book",
     "author": "Kevin Turner",
     "description": "A developer-friendly resource covering reusable UI patterns, accessibility, and responsive design.",
     "category": "Tech",
     "available_quantity": 5,
-    "image_url": "https://example.com/images/frontend-patterns.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781491950296-L.jpg"
   },
   {
     "id": 12,
-    "title": "Earth Under Pressure",
+    "title": "Science Symmetries",
     "author": "Isabella Ford",
     "description": "An insightful study of climate systems, geology, and the forces shaping our planet.",
     "category": "Science",
     "available_quantity": 16,
-    "image_url": "https://example.com/images/earth-under-pressure.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781461278849-L.jpg"
   }
 ]

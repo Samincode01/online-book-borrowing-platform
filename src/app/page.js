@@ -4,6 +4,7 @@ import Headline from "@/components/ui/headline/Headline";
 import Hero from "@/components/ui/hero/Hero";
 import NavBar from "@/components/ui/NavBar";
 import Review from "@/components/ui/review/Review";
+import TopPicks from "@/components/ui/TopPicks/TopPicks";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <div>
       <Headline></Headline>
       <Hero></Hero>
+      <TopPicks></TopPicks>
       <Choose></Choose>
       <Review></Review>
       
