@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function BookCard({ book }) {
@@ -35,9 +36,12 @@ export default function BookCard({ book }) {
             Available: {book.available_quantity}
           </span>
 
-          <button className="btn btn-primary btn-sm">
-            View Details
-          </button>
+          <Link
+  href={`/bookinfo/${book.id}`}
+  className="btn btn-primary btn-sm mt-4"
+>
+View Details
+</Link>
         </div>
       </div>
     </div>

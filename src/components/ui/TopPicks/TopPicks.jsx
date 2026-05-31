@@ -1,6 +1,7 @@
 import books from "@/assets/book-list.json";
 import BookCard from "@/components/ui/book-card/BookCard";
 import Link from "next/link";
+import 'animate.css';
 
 export default function TopPicks() {
   const topBooks = books.slice(0, 4);
@@ -9,8 +10,8 @@ export default function TopPicks() {
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h2 className="text-3xl font-bold">Top Picks for You</h2>
-          <p className="text-gray-500 mt-2">
+          <h2 className="text-3xl font-bold animate__animated animate__bounce ">Top Picks for You</h2>
+          <p className="text-gray-500  animate__animated animate__wobble mt-2">
             Discover our most loved books this week.
           </p>
         </div>
