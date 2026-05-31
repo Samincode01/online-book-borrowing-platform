@@ -1,3 +1,10 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white mt-12">
@@ -18,28 +25,66 @@ export default function Footer() {
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2z" />
               </svg>
 
-              <h2 className="text-2xl font-bold">Book House</h2>
+              <h2 className="text-2xl font-bold">
+                Book House
+              </h2>
             </div>
 
             <p className="text-slate-400 text-sm mt-3">
-              Discover your next favorite book from our Story, Tech, and Science collection.
+              Discover and borrow your next favorite
+              book from our Story, Tech, and Science
+              collection.
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-3">Contact</h3>
+            <h3 className="font-semibold text-lg mb-3">
+              Contact
+            </h3>
 
             <div className="space-y-3 text-sm text-slate-300">
               <p>📍 Book City</p>
               <p>📞 +880 1234-567890</p>
               <p>✉️ support@bookhouse.com</p>
             </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-5 text-xl">
+              <a
+                href="#"
+                className="hover:text-blue-500 transition"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-pink-500 transition"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-sky-400 transition"
+              >
+                <FaTwitter />
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-blue-400 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-5 text-center text-sm text-slate-400">
-          © {new Date().getFullYear()} Book House. All rights reserved.
+          © {new Date().getFullYear()} Book House.
+          All rights reserved.
         </div>
       </div>
     </footer>
