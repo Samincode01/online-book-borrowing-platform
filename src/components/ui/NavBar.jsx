@@ -4,6 +4,8 @@ import { CiUser } from "react-icons/ci";
 import { FaBook } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
 import { MdLogin } from "react-icons/md";
+import Image from "next/image";
+import bookLogo from "@/assets/book-logo.jpg";
 
 export default function NavBar() {
   return (
@@ -46,9 +48,17 @@ export default function NavBar() {
         </div>
 
         {/* Logo */}
-        <Link href="/" className="btn btn-ghost text-xl">
-          Book House
-        </Link>
+        <Link href="/" className="btn btn-ghost flex items-center gap-3 px-2">
+  <Image
+    src={bookLogo}
+    alt="Book House Logo"
+    width={40}
+    height={40}
+    className="rounded-full object-cover"
+  />
+
+  <span className="text-2xl font-bold">Book House</span>
+</Link>
       </div>
 
       {/* Center */}
