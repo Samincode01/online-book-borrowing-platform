@@ -3,9 +3,25 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
-export default function Page() {
+const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const HandleLoginFunc = (data) => {
+    console.log(data);
+
+    const email = data.email;
+    const password = data.password;
+
+    console.log(email, password);
+  };
 
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 px-4">
@@ -14,7 +30,10 @@ export default function Page() {
           Login Your Account
         </h1>
 
-        <form className="space-y-4">
+        <form
+          className="space-y-4"
+          onSubmit={handleSubmit(HandleLoginFunc)}
+        >
           {/* Email */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend mb-2">
@@ -25,7 +44,16 @@ export default function Page() {
               type="email"
               placeholder="Type your email"
               className="input input-bordered w-full"
+              {...register("email", {
+                required: "Email field is required",
+              })}
             />
+
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email.message}
+              </p>
+            )}
           </fieldset>
 
           {/* Password */}
@@ -39,6 +67,9 @@ export default function Page() {
                 type={showPassword ? "text" : "password"}
                 placeholder="Type your password"
                 className="input input-bordered w-full pr-12"
+                {...register("password", {
+                  required: "Password field is required",
+                })}
               />
 
               <span
@@ -54,19 +85,31 @@ export default function Page() {
                 )}
               </span>
             </div>
+
+            {errors.password && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.password.message}
+              </p>
+            )}
           </fieldset>
 
-          <button className="btn w-full bg-slate-800 hover:bg-slate-900 text-white mt-4">
+          <button className="btn w-full btn-primary text-white mt-4">
             Login
           </button>
         </form>
-         <p className="mt-4">
+
+        <p className="mt-4 text-center">
           Don't have an account?{" "}
-          <Link href={"/register"} className="text-blue-500">
+          <Link
+            href="/register"
+            className="text-blue-500"
+          >
             Register
           </Link>
         </p>
       </div>
     </div>
   );
-}
+};
+
+export default LoginPage;
