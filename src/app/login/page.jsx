@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-
+import { FcGoogle } from "react-icons/fc";
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -118,6 +118,13 @@ const LoginPage = () => {
             Register
           </Link>
         </p>
+        <button
+  type="button"
+  className="btn btn-outline w-full flex items-center gap-3"
+>
+  <FcGoogle size={22} />
+  Sign in with Google
+</button>
       </div>
     </div>
   );
